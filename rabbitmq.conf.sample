@@ -1,0 +1,14 @@
+management.ssl.port              = 15671
+management.ssl.cacertfile        = /etc/rabbitmq/ssl/fullchain.pem
+management.ssl.certfile          = /etc/rabbitmq/ssl/cert.pem
+management.ssl.keyfile           = /etc/rabbitmq/ssl/privkey.pem
+
+listeners.ssl.default		 = 5671
+ssl_options.cacertfile           = /etc/rabbitmq/ssl/fullchain.pem
+ssl_options.certfile             = /etc/rabbitmq/ssl/cert.pem
+ssl_options.keyfile              = /etc/rabbitmq/ssl/privkey.pem
+ssl_options.verify               = verify_none
+ssl_options.fail_if_no_peer_cert = false
+default_user                     =
+default_pass                     =
+

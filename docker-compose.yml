@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    hostname: rabbitmq
+    ports:
+    - "5671:5671"
+    - "15671:15671"
+    - "15672:15672"
+    volumes:
+    - /etc/letsencrypt/live/vps01.eu/:/etc/rabbitmq/ssl/
+    - /etc/letsencrypt/archive/vps01.eu/:/etc/archive/vps01.eu/
+    - /home/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+
