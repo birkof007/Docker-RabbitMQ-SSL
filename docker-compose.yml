@@ -6,6 +6,7 @@ services:
     image: rabbitmq:3-management
     container_name: rabbitmq
     hostname: rabbitmq
+    user: "${UID}:${GID}"
     ports:
     - "5671:5671"
     - "15671:15671"
